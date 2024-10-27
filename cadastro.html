@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Clinica ABC Healt" />
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>Cadastro Cliente</h1>
+    <form id="cadastroForm" action="cadastrarCliente.php" method="post">
+      <fieldset>
+        <label for="nome">Nome (Obrigatório):</label>
+        <div class="input-container">
+            <input
+                type="text"
+                id="nome"
+                name="nome"
+                required
+                minlength="2"
+                maxlength="50"
+                class="form-field"
+                autofocus
+            />
+            <span class="validation-icon"></span>
+        </div>
+    
+        <label for="email">Email (Obrigatório):</label>
+        <div class="input-container">
+            <input type="email" id="email" name="email" required class="form-field" />
+            <span class="validation-icon"></span>
+        </div>
+    
+        <label for="cpf">CPF (Obrigatório):</label>
+        <div class="input-container">
+            <input
+                type="text"
+                id="cpf"
+                name="cpf"
+                required
+                pattern="\d{3}\.\d{3}\.\d{3}-\d{2}"
+                class="form-field"
+            />
+            <span class="validation-icon"></span>
+        </div>
+    
+        <label for="idade">Idade (Obrigatório):</label>
+        <div class="input-container">
+            <input
+                type="number"
+                id="idade"
+                name="idade"
+                required min="0"
+                class="form-field"
+            />
+            <span class="validation-icon"></span>
+        </div>
+    
+        <label for="telefone">Telefone (Obrigatório):</label>
+        <div class="input-container">
+            <input type="tel" id="telefone" name="telefone" required class="form-field" />
+            <span class="validation-icon"></span>
+        </div>
+        <button type="submit">Cadastrar</button>
+    </fieldset>
+   
+    </form>
